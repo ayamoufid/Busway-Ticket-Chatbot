@@ -1,0 +1,32 @@
+<aiml>
+
+<category> 
+	<pattern>RESERVE TICKET FOR *</pattern> 
+	<template> Sure, I can help you reserve a ticket for your 		departure from <star index="1"/>. Let me check the 		available train lines. 
+	</template> 
+</category> 
+<category> 
+	<pattern>TRAIN LINE 1</pattern> 
+	<template> Train line 1 is available for departure. 	</template> 
+</category> 
+<category> 
+	<pattern>TRAIN LINE 2</pattern> 
+	<template> Train line 2 is available for departure. 	</template> 
+</category> 
+<category> 
+	<pattern>TRAIN LINE 3</pattern> 
+	<template> Train line 3 is available for departure. 	</template> 
+</category> 
+<category> 
+	<pattern>WHICH TRAIN LINE WOULD YOU LIKE TO CHOOSE 	</pattern> 
+	<template> Please choose a train line from the options 		below: 
+		<think> <set name="line"> </set> </think> 		<condition name="line" value="1"> Train line 1, 			<say>sure, I will reserve the ticket for 				train line 1. 
+			</say> 
+		</condition> 
+		<condition name="line" value="2"> Train line 2, 			<say>great, I will reserve the ticket for 			train line 2. </say> 
+		</condition> 
+		<condition name="line" value="3"> Train line 3, 			<say>alright, I will reserve the ticket 				for train line 3. </say> 		</condition> 
+		<otherwise> I'm sorry, I didn't understand your 			choice. Please choose a number from 1 to 3. 		</otherwise> 
+	</template> 
+</category>
+</aiml>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+<category>
+    <pattern>JE VEUX RESERVER UN TICKET</pattern>
+    <template>Quelle est votre station de départ?</template>
+</category>
+<category>
+    <pattern>MA STATION DE DEPART EST *</pattern>
+    <template>
+        <think><set name="station_depart"><star/></set></think>
+        Recherche des lignes disponibles...
+    </template>
+</category>
+<category>
+    <pattern>JE CHOISIS LA LIGNE *</pattern>
+    <template>
+        <think><set name="ligne_choisie"><star/></set></think>
+        Réservation en cours pour la ligne <get name="ligne_choisie"/>...
+    </template>
+</category>
+<category>
+    <pattern>MERCI</pattern>
+    <template>
+       Vous êtes le(la) bienvenu(e) ! Si vous avez besoin d'assistance supplémentaire, n'hésitez pas à demander. Je suis là pour vous aider !
+    </template>
+</category>
+<category>
+    <pattern>*</pattern>
+    <template>Merci de répéter ce que vous voulez dire.</template>
+</category>
+</aiml>

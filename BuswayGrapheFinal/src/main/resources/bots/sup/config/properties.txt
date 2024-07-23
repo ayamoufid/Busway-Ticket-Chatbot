@@ -1,0 +1,8 @@
+url:http://www.alicebot.org
+name:SUP
+email:callmom-info@pandorabots.com
+gender:female
+botmaster:Aya Moufid
+organization:ALICE AI Foundation
+version:0.0.4
+
